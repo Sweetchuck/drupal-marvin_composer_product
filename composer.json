@@ -1,0 +1,55 @@
+{
+    "type": "drupal-drush",
+    "name": "drupal/marvin_composer_product",
+    "description": "Set of developer helper Drush commands",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "drupal",
+        "drush"
+    ],
+    "homepage": "https://drupal.org/project/marvin_composer_product",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/marvin_composer_product",
+        "source": "https://git.drupalcode.org/project/marvin_composer_product"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": ">=8.2",
+        "consolidation/robo": "^4.0",
+        "drupal/marvin": "3.x-dev",
+        "drupal/marvin_product": "3.x-dev",
+        "drupal/marvin_composer": "2.x-dev",
+        "sweetchuck/robo-composer": "3.x-dev"
+    },
+    "require-dev": {
+        "behat/mink": "^1.10",
+        "behat/mink-browserkit-driver": "^2.1",
+        "drush/drush": "^12.1",
+        "mikey179/vfsstream": "^1.6",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpunit/phpunit": "^9.0",
+        "symfony/browser-kit": "^6.3",
+        "symfony/phpunit-bridge": "^6.3",
+        "weitzman/drupal-test-traits": "^2.1"
+    },
+    "suggest": {
+        "drush/drush": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Drush\\Commands\\marvin_composer_product\\": "Commands/marvin_composer_product/",
+            "Drupal\\marvin_composer_product\\": "src/"
+        }
+    },
+    "extra": {
+        "drush": {
+            "services": {
+                "drush.services.yml": "*"
+            }
+        }
+    }
+}
